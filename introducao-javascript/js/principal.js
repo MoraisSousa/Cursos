@@ -1,7 +1,5 @@
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
-
-
 var pacientes = document.querySelectorAll(".paciente")
 
 for (var i = 0; i < pacientes.length; i++) {
@@ -18,13 +16,11 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = "Peso inválido!";
         pesoEhValido = false;
     }
-
     if (altura <= 0 || altura >= 3) {
         console.log("Altura inválida");
         tdImc.textContent = "Altura inválida!";
         alturaEhValida = false;
     }
-
     if (pesoEhValido && alturaEhValida) {
         var imc = peso / (altura * altura);
         tdimc.textContent = imc.toFixed(2);
