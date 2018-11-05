@@ -19,8 +19,7 @@ for (var i = 0; i < pacientes.length; i++) {
     if (altura <= 0 || altura >= 3) {
         console.log("Altura inválida");
         tdImc.textContent = "Altura inválida!";
-        alturaEhValida = false;
-    }
+        alturaEhValida = false;    }
     if (pesoEhValido && alturaEhValida) {
         var imc = peso / (altura * altura);
         tdimc.textContent = imc.toFixed(2);
