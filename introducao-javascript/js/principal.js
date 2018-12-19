@@ -4,7 +4,7 @@ var pacientes = document.querySelectorAll(".paciente")
 
 for (var i = 0; i < pacientes.length; i++) {
     var paciente = pacientes[i];
-    console.log(paciente);
+    
     var peso = paciente.querySelector(".info-peso").textContent;    
     var altura = paciente.querySelector(".info-altura").textContent;
     var tdimc = paciente.querySelector(".info-imc");
@@ -12,13 +12,13 @@ for (var i = 0; i < pacientes.length; i++) {
     var pesoEhValido = true;
 
     if (peso <= 0 || peso > 1000) {
-        console.log("Peso inválido");
+      
         tdimc.textContent = "Peso inválido!";
         paciente.classList.add("paciente-invalido")
         pesoEhValido = false;
     }
     if (altura <= 0 || altura >= 3) {
-        console.log("Altura inválida");
+        
         tdimc.textContent = "Altura inválida!";
         paciente.classList.add("paciente-invalido")
         alturaEhValida = false;    }
@@ -29,6 +29,12 @@ for (var i = 0; i < pacientes.length; i++) {
         tdimc.textContent = "Altura e/ou peso inválidos!";
         paciente.classList.add("paciente-invalido")
     }
+}
+
+titulo.addEventListener("click", mostraMensagem);
+
+function mostraMensagem(){
+    console.log("Ola eu fui clicado!");
 }
 
 
